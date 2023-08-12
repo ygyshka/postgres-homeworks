@@ -13,7 +13,7 @@ create table employers
 	first_name varchar(100) not null,
 	last_name varchar(100) not null,
 	title varchar(100) not null,
-	birth_date varchar(50),
+	birth_date date,
 	notes text
 );
 
@@ -22,7 +22,7 @@ create table orders
 	order_id int primary key,
 	customer_id varchar(100) references customers(customer_id),
 	employer_id int not null references employers(employer_id),
-	order_date varchar(50),
+	order_date date,
 	ship_city varchar(100) not null
 );
 
